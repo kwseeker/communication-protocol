@@ -1,6 +1,6 @@
 # 网络通信协议
 
-学习计算机网络和通信协议，最好还是借助 `Cisco Packet Tracer`、`eNSP` 等模拟软件以及`Wireshark`等抓包工具自己组网测试下。
+学习计算机网络和通信协议，最好还是借助 `Cisco Packet Tracer`、`eNSP` 等模拟软件以及`Wireshark`等抓包工具自己组网测试下。组网的过程中自然会推动学习涉及到的核心知识。
 
 分类：
 
