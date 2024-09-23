@@ -8,4 +8,22 @@ VPN（Virtual Private Network，虚拟私人网络）是一种常用于提高数
 
 ## Packet Tracer 配置 VPN
 
-TODO
+参考拓扑图：vpn.pkt，模拟公司环境和手机通过VPN连接（IPSec协议），手机再通过开启热点与家庭网络连接。
+
+搭建VPN通道并不需要配置 R1 的路由。
+
+主要配置是通过 ipsec 命令配置密钥和对端IP：
+
+```shell
+# R0 配置
+crypto isakmp key 123456 address 12.0.0.1
+# R1 配置
+crypto isakmp key 123456 address 11.0.0.1
+```
+
+PC0 -> PC1 可以正常通信，
+
+PC0 -> PC2 数据包可以从 PC0 发到 PC1, 但是响应过程中从 R3 转到 R2后，会找不到下一跳。
+
+暂不清楚哪里可能配置有问题，可能需要深入研究下IPSec协议工作原理， TODO。
+
